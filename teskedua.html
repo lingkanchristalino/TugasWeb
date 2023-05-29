@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luas Lingkaran</title>
+  <script>
+    function calculateArea() {
+      var radiusInput = document.getElementById('radius');
+      var radius = parseFloat(radiusInput.value);
+
+      if (isNaN(radius)) {
+        alert('Error: Please provide a valid radius.');
+        return;
+      }
+
+      var area = Math.PI * radius ** 2;
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = 'The area of a circle with radius ' + radius + ' is ' + area + '.';
+    }
+  </script>
+</head>
+<body>
+  <h1>Luas Lingkaran</h1>
+  <input type="number" id="radius" placeholder="Radius">
+  <button onclick="calculateArea()">Calculate</button>
+  <div id="result"></div>
+</body>
+</html>
